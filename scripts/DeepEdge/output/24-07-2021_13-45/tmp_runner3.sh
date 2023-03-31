@@ -1,0 +1,5 @@
+/Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/runner.sh /Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/output/24-07-2021_13-45 default_config edge_devices.xml applications.xml 4
+/Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/runner.sh /Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/output/24-07-2021_13-45 default_config edge_devices.xml applications.xml 8
+/Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/runner.sh /Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/output/24-07-2021_13-45 default_config edge_devices.xml applications.xml 12
+/Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/runner.sh /Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/output/24-07-2021_13-45 default_config edge_devices.xml applications.xml 16
+/Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/runner.sh /Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/output/24-07-2021_13-45 default_config edge_devices.xml applications.xml 20

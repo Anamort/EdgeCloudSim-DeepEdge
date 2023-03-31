@@ -1,0 +1,1 @@
+/Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/runner.sh /Users/barisyamansavascilar/Desktop/EdgeCloudSim-master/scripts/DeepEdge/output/24-01-2020_21-56 default_config edge_devices.xml applications.xml 7

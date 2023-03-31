@@ -1,0 +1,535 @@
+Simulation started at 24/07/2021 23:54:58
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:54:58
+Scenario: TWO_TIER_WITH_EO - Policy: DDQN - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1600
+Creating tasks...Done, 
+Creating device locations...Done.
+o.n.l.f.Nd4jBackend - Loaded [CpuBackend] backend
+o.n.n.NativeOpsHolder - Number of threads used for linear algebra: 1
+o.n.n.Nd4jBlas - Number of threads used for OpenMP BLAS: 4
+o.n.l.a.o.e.DefaultOpExecutioner - Backend used: [CPU]; OS: [Mac OS X]
+o.n.l.a.o.e.DefaultOpExecutioner - Cores: [8]; Memory: [1,8GB];
+o.n.l.a.o.e.DefaultOpExecutioner - Blas vendor: [OPENBLAS]
+o.d.n.m.MultiLayerNetwork - Starting MultiLayerNetwork with WorkspaceModes set to [training: ENABLED; inference: ENABLED], cacheMode set to [NONE]
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 5715(4284/1431/0)
+# of failed tasks (Edge/Cloud/Mobile): 158(143/15/0)
+# of completed tasks (Edge/Cloud/Mobile): 5557(4141/1416/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 56(49/1/6)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 158/0(0/0/0)
+percentage of failed tasks: 2,764654%
+average service time: 4,742106 seconds. (on Edge: 5,665797, on Cloud: 2,040829, on Mobile: NaN)
+average processing time: 4,251618 seconds. (on Edge: 5,547746, on Cloud: 0,461177, on Mobile: NaN)
+average network delay: 0,490487 seconds. (LAN delay: 0,105349, MAN delay: 0,013535, WAN delay: 1,579652)
+average server utilization Edge/Cloud/Mobile: 27,583819/2,066327/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:55:18. It took 20 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:55:18
+Scenario: TWO_TIER_WITH_EO - Policy: FUZZY_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1600
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 6482(1805/4677/0)
+# of failed tasks (Edge/Cloud/Mobile): 184(27/157/0)
+# of completed tasks (Edge/Cloud/Mobile): 6298(1778/4520/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 38(4/9/25)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 52(0/52/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 132/0(0/0/0)
+percentage of failed tasks: 2,838630%
+average service time: 4,877663 seconds. (on Edge: 4,534266, on Cloud: 5,012742, on Mobile: NaN)
+average processing time: 2,517589 seconds. (on Edge: 4,417624, on Cloud: 1,770186, on Mobile: NaN)
+average network delay: 2,360074 seconds. (LAN delay: 0,113188, MAN delay: 0,013956, WAN delay: 3,242556)
+average server utilization Edge/Cloud/Mobile: 7,981050/24,061224/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:56:04. It took 45 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:56:04
+Scenario: TWO_TIER_WITH_EO - Policy: NETWORK_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1600
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 5711(1137/4574/0)
+# of failed tasks (Edge/Cloud/Mobile): 130(18/112/0)
+# of completed tasks (Edge/Cloud/Mobile): 5581(1119/4462/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 47(3/7/37)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 130/0(0/0/0)
+percentage of failed tasks: 2,276309%
+average service time: 4,718288 seconds. (on Edge: 5,078975, on Cloud: 4,627833, on Mobile: NaN)
+average processing time: 2,422079 seconds. (on Edge: 4,959066, on Cloud: 1,785842, on Mobile: NaN)
+average network delay: 2,296209 seconds. (LAN delay: 0,108300, MAN delay: 0,013923, WAN delay: 2,841991)
+average server utilization Edge/Cloud/Mobile: 5,575802/24,321429/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:56:05. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:56:05
+Scenario: TWO_TIER_WITH_EO - Policy: UTILIZATION_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1600
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 6147(5289/858/0)
+# of failed tasks (Edge/Cloud/Mobile): 183(170/13/0)
+# of completed tasks (Edge/Cloud/Mobile): 5964(5119/845/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 105(104/0/1)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 183/0(0/0/0)
+percentage of failed tasks: 2,977062%
+average service time: 5,780860 seconds. (on Edge: 6,288829, on Cloud: 2,703591, on Mobile: NaN)
+average processing time: 5,365676 seconds. (on Edge: 6,166425, on Cloud: 0,514748, on Mobile: NaN)
+average network delay: 0,415184 seconds. (LAN delay: 0,109266, MAN delay: 0,014177, WAN delay: 2,188843)
+average server utilization Edge/Cloud/Mobile: 37,959184/0,918367/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:56:06. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:56:06
+Scenario: TWO_TIER_WITH_EO - Policy: HYBRID - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1600
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 5908(5316/592/0)
+# of failed tasks (Edge/Cloud/Mobile): 180(172/8/0)
+# of completed tasks (Edge/Cloud/Mobile): 5728(5144/584/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 79(79/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 180/0(0/0/0)
+percentage of failed tasks: 3,046716%
+average service time: 5,704147 seconds. (on Edge: 6,077850, on Cloud: 2,412487, on Mobile: NaN)
+average processing time: 5,397919 seconds. (on Edge: 5,955878, on Cloud: 0,483296, on Mobile: NaN)
+average network delay: 0,306228 seconds. (LAN delay: 0,108936, MAN delay: 0,014159, WAN delay: 1,929191)
+average server utilization Edge/Cloud/Mobile: 36,450437/0,688776/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:56:08. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:56:08
+Scenario: TWO_TIER_WITH_EO - Policy: DDQN - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1800
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 6274(4619/1655/0)
+# of failed tasks (Edge/Cloud/Mobile): 179(152/27/0)
+# of completed tasks (Edge/Cloud/Mobile): 6095(4467/1628/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 51(47/2/2)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 6(6/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 173/0(0/0/0)
+percentage of failed tasks: 2,853044%
+average service time: 4,916599 seconds. (on Edge: 5,869810, on Cloud: 2,301125, on Mobile: NaN)
+average processing time: 4,347243 seconds. (on Edge: 5,748794, on Cloud: 0,501589, on Mobile: NaN)
+average network delay: 0,569356 seconds. (LAN delay: 0,108251, MAN delay: 0,013570, WAN delay: 1,799536)
+average server utilization Edge/Cloud/Mobile: 30,076531/2,464286/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:56:17. It took 9 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:56:17
+Scenario: TWO_TIER_WITH_EO - Policy: FUZZY_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1800
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 6908(2218/4690/0)
+# of failed tasks (Edge/Cloud/Mobile): 347(41/306/0)
+# of completed tasks (Edge/Cloud/Mobile): 6561(2177/4384/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 60(15/15/30)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 186(0/186/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 152/9(0/0/9)
+percentage of failed tasks: 5,023162%
+average service time: 5,125443 seconds. (on Edge: 4,493033, on Cloud: 5,439483, on Mobile: NaN)
+average processing time: 2,830579 seconds. (on Edge: 4,383045, on Cloud: 2,059657, on Mobile: NaN)
+average network delay: 2,294864 seconds. (LAN delay: 0,105626, MAN delay: 0,014028, WAN delay: 3,379826)
+average server utilization Edge/Cloud/Mobile: 9,839650/28,500000/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:00. It took 43 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:00
+Scenario: TWO_TIER_WITH_EO - Policy: NETWORK_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1800
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 7265(1492/5773/0)
+# of failed tasks (Edge/Cloud/Mobile): 888(22/866/0)
+# of completed tasks (Edge/Cloud/Mobile): 6377(1470/4907/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 81(6/17/58)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 717(0/717/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 171/0(0/0/0)
+percentage of failed tasks: 12,222987%
+average service time: 5,272594 seconds. (on Edge: 5,246364, on Cloud: 5,280452, on Mobile: NaN)
+average processing time: 3,095080 seconds. (on Edge: 5,112171, on Cloud: 2,490815, on Mobile: NaN)
+average network delay: 2,177514 seconds. (LAN delay: 0,121618, MAN delay: 0,014068, WAN delay: 2,789636)
+average server utilization Edge/Cloud/Mobile: 8,166910/36,397959/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:01. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:01
+Scenario: TWO_TIER_WITH_EO - Policy: UTILIZATION_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1800
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 6984(5462/1522/0)
+# of failed tasks (Edge/Cloud/Mobile): 217(170/47/0)
+# of completed tasks (Edge/Cloud/Mobile): 6767(5292/1475/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 105(98/1/6)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 200/17(0/0/17)
+percentage of failed tasks: 3,107102%
+average service time: 5,791540 seconds. (on Edge: 6,417048, on Cloud: 3,547341, on Mobile: NaN)
+average processing time: 5,035407 seconds. (on Edge: 6,287642, on Cloud: 0,542640, on Mobile: NaN)
+average network delay: 0,756133 seconds. (LAN delay: 0,116162, MAN delay: 0,014277, WAN delay: 3,004702)
+average server utilization Edge/Cloud/Mobile: 40,654155/2,142857/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:03. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:03
+Scenario: TWO_TIER_WITH_EO - Policy: HYBRID - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 1800
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 6847(5567/1280/0)
+# of failed tasks (Edge/Cloud/Mobile): 157(145/12/0)
+# of completed tasks (Edge/Cloud/Mobile): 6690(5422/1268/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 90(90/0/0)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 157/0(0/0/0)
+percentage of failed tasks: 2,292975%
+average service time: 5,735657 seconds. (on Edge: 6,372373, on Cloud: 3,013044, on Mobile: NaN)
+average processing time: 5,177413 seconds. (on Edge: 6,250685, on Cloud: 0,588073, on Mobile: NaN)
+average network delay: 0,558245 seconds. (LAN delay: 0,108428, MAN delay: 0,014276, WAN delay: 2,424971)
+average server utilization Edge/Cloud/Mobile: 40,009111/2,096939/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:04. It took 930 Milli Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:04
+Scenario: TWO_TIER_WITH_EO - Policy: DDQN - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2000
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 8387(6182/2205/0)
+# of failed tasks (Edge/Cloud/Mobile): 916(891/25/0)
+# of completed tasks (Edge/Cloud/Mobile): 7471(5291/2180/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 94(85/1/8)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 705(705/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 211/0(0/0/0)
+percentage of failed tasks: 10,921664%
+average service time: 5,285274 seconds. (on Edge: 6,390963, on Cloud: 2,601695, on Mobile: NaN)
+average processing time: 4,588376 seconds. (on Edge: 6,262011, on Cloud: 0,526358, on Mobile: NaN)
+average network delay: 0,696898 seconds. (LAN delay: 0,116205, MAN delay: 0,013607, WAN delay: 2,075338)
+average server utilization Edge/Cloud/Mobile: 40,550292/3,994898/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:10. It took 6 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:10
+Scenario: TWO_TIER_WITH_EO - Policy: FUZZY_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2000
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 7646(2808/4838/0)
+# of failed tasks (Edge/Cloud/Mobile): 587(35/552/0)
+# of completed tasks (Edge/Cloud/Mobile): 7059(2773/4286/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 134(46/19/69)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 328(0/328/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 157/102(0/0/102)
+percentage of failed tasks: 7,677217%
+average service time: 5,133211 seconds. (on Edge: 4,249112, on Cloud: 5,705214, on Mobile: NaN)
+average processing time: 2,856493 seconds. (on Edge: 4,134773, on Cloud: 2,029458, on Mobile: NaN)
+average network delay: 2,276718 seconds. (LAN delay: 0,109787, MAN delay: 0,014057, WAN delay: 3,675757)
+average server utilization Edge/Cloud/Mobile: 12,091837/26,785714/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:42. It took 32 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:42
+Scenario: TWO_TIER_WITH_EO - Policy: NETWORK_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2000
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 7951(1914/6037/0)
+# of failed tasks (Edge/Cloud/Mobile): 1300(40/1260/0)
+# of completed tasks (Edge/Cloud/Mobile): 6651(1874/4777/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 58(8/12/38)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 1119(0/1119/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 181/0(0/0/0)
+percentage of failed tasks: 16,350145%
+average service time: 5,456251 seconds. (on Edge: 5,566422, on Cloud: 5,413031, on Mobile: NaN)
+average processing time: 3,383185 seconds. (on Edge: 5,433592, on Cloud: 2,578818, on Mobile: NaN)
+average network delay: 2,073066 seconds. (LAN delay: 0,120310, MAN delay: 0,014238, WAN delay: 2,834214)
+average server utilization Edge/Cloud/Mobile: 11,064140/40,806122/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:43. It took 813 Milli Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:43
+Scenario: TWO_TIER_WITH_EO - Policy: UTILIZATION_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2000
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 7905(5785/2120/0)
+# of failed tasks (Edge/Cloud/Mobile): 259(176/83/0)
+# of completed tasks (Edge/Cloud/Mobile): 7646(5609/2037/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 143(138/0/5)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 208/51(0/0/51)
+percentage of failed tasks: 3,276407%
+average service time: 5,722129 seconds. (on Edge: 6,416113, on Cloud: 3,811203, on Mobile: NaN)
+average processing time: 4,778570 seconds. (on Edge: 6,294628, on Cloud: 0,604016, on Mobile: NaN)
+average network delay: 0,943559 seconds. (LAN delay: 0,108043, MAN delay: 0,014391, WAN delay: 3,207187)
+average server utilization Edge/Cloud/Mobile: 43,556851/3,566327/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:44. It took 886 Milli Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:44
+Scenario: TWO_TIER_WITH_EO - Policy: HYBRID - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2000
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 7521(5577/1944/0)
+# of failed tasks (Edge/Cloud/Mobile): 196(163/33/0)
+# of completed tasks (Edge/Cloud/Mobile): 7325(5414/1911/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 111(110/0/1)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 0(0/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 196/0(0/0/0)
+percentage of failed tasks: 2,606036%
+average service time: 5,763939 seconds. (on Edge: 6,575374, on Cloud: 3,465087, on Mobile: NaN)
+average processing time: 4,959956 seconds. (on Edge: 6,449041, on Cloud: 0,741272, on Mobile: NaN)
+average network delay: 0,803983 seconds. (LAN delay: 0,113022, MAN delay: 0,014361, WAN delay: 2,723814)
+average server utilization Edge/Cloud/Mobile: 42,228499/4,117347/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:45. It took 782 Milli Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:45
+Scenario: TWO_TIER_WITH_EO - Policy: DDQN - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2200
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 7704(5700/2004/0)
+# of failed tasks (Edge/Cloud/Mobile): 510(484/26/0)
+# of completed tasks (Edge/Cloud/Mobile): 7194(5216/1978/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 95(89/2/4)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 323(323/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 186/1(0/0/1)
+percentage of failed tasks: 6,619938%
+average service time: 5,355782 seconds. (on Edge: 6,289659, on Cloud: 2,893142, on Mobile: NaN)
+average processing time: 4,599926 seconds. (on Edge: 6,156441, on Cloud: 0,495383, on Mobile: NaN)
+average network delay: 0,755856 seconds. (LAN delay: 0,120456, MAN delay: 0,013610, WAN delay: 2,397758)
+average server utilization Edge/Cloud/Mobile: 39,801385/3,336735/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:57:50. It took 5 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:57:50
+Scenario: TWO_TIER_WITH_EO - Policy: FUZZY_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2200
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 8572(2834/5738/0)
+# of failed tasks (Edge/Cloud/Mobile): 1370(58/1312/0)
+# of completed tasks (Edge/Cloud/Mobile): 7202(2776/4426/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 86(20/13/53)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 915(0/915/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 231/224(0/0/224)
+percentage of failed tasks: 15,982268%
+average service time: 5,539074 seconds. (on Edge: 4,253265, on Cloud: 6,345537, on Mobile: NaN)
+average processing time: 3,262597 seconds. (on Edge: 4,132900, on Cloud: 2,716740, on Mobile: NaN)
+average network delay: 2,276477 seconds. (LAN delay: 0,115800, MAN delay: 0,014161, WAN delay: 3,628797)
+average server utilization Edge/Cloud/Mobile: 12,955539/41,801020/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:58:26. It took 36 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:58:26
+Scenario: TWO_TIER_WITH_EO - Policy: NETWORK_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2200
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 8937(2019/6918/0)
+# of failed tasks (Edge/Cloud/Mobile): 1857(42/1815/0)
+# of completed tasks (Edge/Cloud/Mobile): 7080(1977/5103/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 91(14/29/48)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 1662(0/1662/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 195/0(0/0/0)
+percentage of failed tasks: 20,778785%
+average service time: 5,756307 seconds. (on Edge: 5,558043, on Cloud: 5,833118, on Mobile: NaN)
+average processing time: 3,660997 seconds. (on Edge: 5,411019, on Cloud: 2,983005, on Mobile: NaN)
+average network delay: 2,095310 seconds. (LAN delay: 0,134270, MAN delay: 0,014367, WAN delay: 2,850113)
+average server utilization Edge/Cloud/Mobile: 12,425292/49,591837/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:58:27. It took 800 Milli Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:58:27
+Scenario: TWO_TIER_WITH_EO - Policy: UTILIZATION_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2200
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 9176(5947/3229/0)
+# of failed tasks (Edge/Cloud/Mobile): 1033(243/790/0)
+# of completed tasks (Edge/Cloud/Mobile): 8143(5704/2439/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 175(139/2/34)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 68(0/68/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 350/615(0/0/615)
+percentage of failed tasks: 11,257629%
+average service time: 6,801537 seconds. (on Edge: 6,670791, on Cloud: 7,107307, on Mobile: NaN)
+average processing time: 5,111522 seconds. (on Edge: 6,546104, on Cloud: 1,756519, on Mobile: NaN)
+average network delay: 1,690015 seconds. (LAN delay: 0,111242, MAN delay: 0,014528, WAN delay: 5,350788)
+average server utilization Edge/Cloud/Mobile: 46,404883/13,132653/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:58:28. It took 989 Milli Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:58:28
+Scenario: TWO_TIER_WITH_EO - Policy: HYBRID - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2200
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 9139(6083/3056/0)
+# of failed tasks (Edge/Cloud/Mobile): 493(186/307/0)
+# of completed tasks (Edge/Cloud/Mobile): 8646(5897/2749/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 154(150/0/4)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 230(0/230/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 263/0(0/0/0)
+percentage of failed tasks: 5,394463%
+average service time: 6,183108 seconds. (on Edge: 6,561894, on Cloud: 5,370558, on Mobile: NaN)
+average processing time: 5,173447 seconds. (on Edge: 6,427700, on Cloud: 2,482892, on Mobile: NaN)
+average network delay: 1,009661 seconds. (LAN delay: 0,120761, MAN delay: 0,014561, WAN delay: 2,887666)
+average server utilization Edge/Cloud/Mobile: 46,721939/19,561224/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:58:29. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:58:29
+Scenario: TWO_TIER_WITH_EO - Policy: DDQN - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2400
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 9293(6516/2777/0)
+# of failed tasks (Edge/Cloud/Mobile): 879(824/55/0)
+# of completed tasks (Edge/Cloud/Mobile): 8414(5692/2722/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 116(108/2/6)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 647(647/0/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 228/4(0/0/4)
+percentage of failed tasks: 9,458732%
+average service time: 5,420901 seconds. (on Edge: 6,526504, on Cloud: 3,108962, on Mobile: NaN)
+average processing time: 4,536336 seconds. (on Edge: 6,394982, on Cloud: 0,649705, on Mobile: NaN)
+average network delay: 0,884564 seconds. (LAN delay: 0,118817, MAN delay: 0,013629, WAN delay: 2,459257)
+average server utilization Edge/Cloud/Mobile: 44,535350/5,265306/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:58:36. It took 6 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:58:36
+Scenario: TWO_TIER_WITH_EO - Policy: FUZZY_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2400
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 9096(3880/5216/0)
+# of failed tasks (Edge/Cloud/Mobile): 1152(75/1077/0)
+# of completed tasks (Edge/Cloud/Mobile): 7944(3805/4139/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 161(52/9/100)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 166(0/166/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 223/763(0/0/763)
+percentage of failed tasks: 12,664908%
+average service time: 5,626366 seconds. (on Edge: 4,458366, on Cloud: 6,700113, on Mobile: NaN)
+average processing time: 3,115870 seconds. (on Edge: 4,339887, on Cloud: 1,990626, on Mobile: NaN)
+average network delay: 2,510496 seconds. (LAN delay: 0,112918, MAN delay: 0,014298, WAN delay: 4,709487)
+average server utilization Edge/Cloud/Mobile: 17,749636/27,520408/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:59:15. It took 39 Seconds
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:59:15
+Scenario: TWO_TIER_WITH_EO - Policy: NETWORK_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2400
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 9090(2001/7089/0)
+# of failed tasks (Edge/Cloud/Mobile): 2016(48/1968/0)
+# of completed tasks (Edge/Cloud/Mobile): 7074(1953/5121/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 103(12/41/50)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 1823(0/1823/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 193/0(0/0/0)
+percentage of failed tasks: 22,178218%
+average service time: 5,813292 seconds. (on Edge: 5,670052, on Cloud: 5,867920, on Mobile: NaN)
+average processing time: 3,714603 seconds. (on Edge: 5,530135, on Cloud: 3,022212, on Mobile: NaN)
+average network delay: 2,098689 seconds. (LAN delay: 0,126762, MAN delay: 0,014417, WAN delay: 2,845708)
+average server utilization Edge/Cloud/Mobile: 11,927843/48,857143/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:59:16. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:59:16
+Scenario: TWO_TIER_WITH_EO - Policy: UTILIZATION_BASED - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2400
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 8955(5912/3043/0)
+# of failed tasks (Edge/Cloud/Mobile): 792(196/596/0)
+# of completed tasks (Edge/Cloud/Mobile): 8163(5716/2447/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 165(147/0/18)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 86(0/86/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 284/422(0/0/422)
+percentage of failed tasks: 8,844221%
+average service time: 6,457681 seconds. (on Edge: 6,567122, on Cloud: 6,202036, on Mobile: NaN)
+average processing time: 4,930567 seconds. (on Edge: 6,437739, on Cloud: 1,409930, on Mobile: NaN)
+average network delay: 1,527115 seconds. (LAN delay: 0,115941, MAN delay: 0,014500, WAN delay: 4,792106)
+average server utilization Edge/Cloud/Mobile: 46,038630/10,438776/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:59:18. It took 1 Second
+----------------------------------------------------------------------
+Scenario started at 24/07/2021 23:59:18
+Scenario: TWO_TIER_WITH_EO - Policy: HYBRID - #iteration: 9
+Duration: 5.0 min (warm up period: 1.0 min) - #devices: 2400
+Creating tasks...Done, 
+Creating device locations...Done.
+SimManager is starting...Done.
+.........10.........20.........30.........40.........50.........60.........70.........80.........90.........100
+# of tasks (Edge/Cloud/Mobile): 8911(6079/2832/0)
+# of failed tasks (Edge/Cloud/Mobile): 224(157/67/0)
+# of completed tasks (Edge/Cloud/Mobile): 8687(5922/2765/0)
+# of uncompleted tasks (Edge/Cloud/Mobile): 129(125/0/4)
+# of failed tasks due to vm capacity (Edge/Cloud/Mobile): 4(0/4/0)
+# of failed tasks due to Mobility/Network(WLAN/MAN/WAN): 220/0(0/0/0)
+percentage of failed tasks: 2,513747%
+average service time: 5,964708 seconds. (on Edge: 6,551233, on Cloud: 4,708504, on Mobile: NaN)
+average processing time: 4,971063 seconds. (on Edge: 6,417543, on Cloud: 1,873034, on Mobile: NaN)
+average network delay: 0,993644 seconds. (LAN delay: 0,120232, MAN delay: 0,014554, WAN delay: 2,835470)
+average server utilization Edge/Cloud/Mobile: 47,104592/14,846939/0,000000
+average cost: 0.0$
+Scenario finished at 24/07/2021 23:59:20. It took 1 Second
+----------------------------------------------------------------------
+Simulation finished at 24/07/2021 23:59:20. It took 4 Minutes 21 Seconds
