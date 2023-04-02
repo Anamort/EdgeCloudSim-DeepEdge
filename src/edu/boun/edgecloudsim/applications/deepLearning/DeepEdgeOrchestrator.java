@@ -29,8 +29,8 @@ import org.nd4j.linalg.api.ndarray.INDArray;
 
 public class DeepEdgeOrchestrator extends EdgeOrchestrator {
 
-    public ArrayList <Double> m_taskFeatures;
-    private boolean isTraining = false;
+
+
     public static final double MAX_DATA_SIZE=2500;
 
     private int numberOfHost; //used by load balancer
@@ -145,14 +145,6 @@ public class DeepEdgeOrchestrator extends EdgeOrchestrator {
 
                 //finding least loaded neighbor edge host
                 double bestRemoteEdgeUtilization = 100; //start with max value
-                if (isTraining){
-                    m_taskFeatures = new ArrayList<>();
-                    m_taskFeatures.add(wanBW);
-                    m_taskFeatures.add(wanDelay);
-                    m_taskFeatures.add((double)task.getCloudletLength());
-                    m_taskFeatures.add(edgeUtilization);
-                    m_taskFeatures.add(manDelay);
-                }
                 for(int hostIndex=0; hostIndex<numberOfHost; hostIndex++){
                     List<EdgeVM> vmArray = SimManager.getInstance().getEdgeServerManager().getVmList(hostIndex);
 
@@ -163,9 +155,7 @@ public class DeepEdgeOrchestrator extends EdgeOrchestrator {
 
                     double avgUtilization = (totalUtlization / (double)(vmArray.size()));
 
-                    if (isTraining){
-                        m_taskFeatures.add(avgUtilization);
-                    }
+
 
                     EdgeHost host = (EdgeHost)(vmArray.get(0).getHost()); //all VMs have the same host
                     if(host.getLocation().getServingWlanId() == task.getSubmittedLocation().getServingWlanId()){
@@ -176,12 +166,6 @@ public class DeepEdgeOrchestrator extends EdgeOrchestrator {
                         bestRemoteEdgeHostIndex = hostIndex;
                         bestRemoteEdgeUtilization = avgUtilization;
                     }
-                }
-                if (isTraining){
-                    m_taskFeatures.add(nearestEdgeUtilization);
-                    m_taskFeatures.add((double)nearestEdgeHostIndex);
-                    m_taskFeatures.add(bestRemoteEdgeUtilization);
-                    m_taskFeatures.add((double)bestRemoteEdgeHostIndex);
                 }
 
                 if(policy.equals("FUZZY_BASED")){
