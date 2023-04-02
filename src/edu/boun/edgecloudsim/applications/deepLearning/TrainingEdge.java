@@ -28,7 +28,6 @@ public class TrainingEdge {
 
     public static void main(String[] args){
         boolean isTrainingForDDQN = false;
-        boolean isModelWillBeSaved = false;
         Log.disable();
 
         //enable console ourput and file output of this application
@@ -133,7 +132,7 @@ public class TrainingEdge {
                     }//End of orchestrators loop
                 }//End of scenarios loop
             }//End of mobile devices loop
-            if (isTrainingForDDQN && isModelWillBeSaved){
+            if (isTrainingForDDQN){
                 try{
                     //ddqnAgent.saveModel(Integer.toString(episode), ddqnAgent.getReward());
                     ddqnAgent.saveModel(Integer.toString(episode),ddqnAgent.getReward(), ddqnAgent.getAvgQvalue());
