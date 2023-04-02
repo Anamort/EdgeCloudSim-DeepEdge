@@ -46,6 +46,7 @@ public class DeepEdgeOrchestrator extends EdgeOrchestrator {
     private double activeWanTaskCount = 0;
     private double totalSizeOfActiveManTasks = 0;
     private int counter = 0;
+    private final int EPISODE_SIZE = 75000;
 
     public DeepEdgeOrchestrator (String _policy, String _simScenario) {
         super(_policy, _simScenario);
@@ -99,7 +100,7 @@ public class DeepEdgeOrchestrator extends EdgeOrchestrator {
 
             if(policy.equals("DDQN")){
                 counter++;
-                if (counter > 75000){
+                if (counter > EPISODE_SIZE){
                     //System.out.println("Counter: "+counter);
                     Task dummyTask = new Task(0, 0, 0, 0, 128, 128, new UtilizationModelFull(), new UtilizationModelFull(), new UtilizationModelFull());
                     double wanDelay = SimManager.getInstance().getNetworkModel().getUploadDelay(task.getMobileDeviceId(),
@@ -354,9 +355,9 @@ public class DeepEdgeOrchestrator extends EdgeOrchestrator {
 
         currentState.setDelaySensitivity(delay_sensitivity);
 
-        currentState.setNumberOfWlanOffloadedTask(numberOfWlanOffloadedTask/75000);
-        currentState.setNumberOfManOffloadedTask(numberOfManOffloadedTask/75000);
-        currentState.setNumberOfWanOffloadedTask(numberOfWanOffloadedTask/75000);
+        currentState.setNumberOfWlanOffloadedTask(numberOfWlanOffloadedTask/EPISODE_SIZE);
+        currentState.setNumberOfManOffloadedTask(numberOfManOffloadedTask/EPISODE_SIZE);
+        currentState.setNumberOfWanOffloadedTask(numberOfWanOffloadedTask/EPISODE_SIZE);
         currentState.setActiveManTaskCount(activeManTaskCount/25);
         currentState.setActiveWanTaskCount(activeWanTaskCount/25);
 
