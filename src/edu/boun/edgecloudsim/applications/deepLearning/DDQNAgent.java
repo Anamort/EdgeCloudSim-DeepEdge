@@ -55,7 +55,7 @@ public class DDQNAgent {
                 .miniBatch(false)
                 .list()
                 .layer(new DenseLayer.Builder()
-                        .nIn(9 + numberOfEdgeServers) //23 olacak = 14 + 9 gercek feature sayısı 9
+                        .nIn(9 + numberOfEdgeServers)
                         .nOut(64)
                         .activation(Activation.RELU)
                         // random initialize weights with values between 0 and 1
