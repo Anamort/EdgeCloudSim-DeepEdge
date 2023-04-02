@@ -45,7 +45,6 @@ public class DeepEdgeOrchestrator extends EdgeOrchestrator {
     private double activeManTaskCount = 0;
     private double activeWanTaskCount = 0;
     private double totalSizeOfActiveManTasks = 0;
-    private double totalReward = 0;
     private int counter = 0;
 
     public DeepEdgeOrchestrator (String _policy, String _simScenario) {
@@ -79,9 +78,6 @@ public class DeepEdgeOrchestrator extends EdgeOrchestrator {
         }
     }
 
-    public ArrayList<Double> getFeaturesForTask(){
-        return m_taskFeatures;
-    }
 
     /*
      * (non-Javadoc)
