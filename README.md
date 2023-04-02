@@ -1,6 +1,6 @@
-# EdgeCloudSim
+# EdgeCloudSim - DeepEdge 
 
-EdgeCloudSim provides a simulation environment specific to Edge Computing scenarios where it is possible to conduct experiments that considers both computational and networking resources. EdgeCloudSim is based on CloudSim but adds considerable functionality so that it can be efficiently used for Edge Computing scenarios. EdgeCloudSim is an open source tool and any contributions are welcome. If you want to contribute EdgeCloudSim, please check below feature list and the [contributing guidelines](/CONTRIBUTING.md). If you want to use EdgeCloudSim in your research work, please cite our paper [[3]](https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.3493).
+EdgeCloudSim provides a simulation environment specific to Edge Computing scenarios where it is possible to conduct experiments that consider both computational and networking resources. In this particular implementation, we enhance the features of EdgeCloudSim to apply DRL (Deep Reinforcement Learning) solutions in an edge computing environment. We use the Double DQN method in this implementation by utilizing the Deeplearning4j library. If you want to use this implementation in your research work, please cite our paper [[1]](https://ieeexplore.ieee.org/document/9930655).
 
 ## Discussion Forum
 
@@ -8,68 +8,49 @@ The discussion forum for EdgeCloudSim can be found [here](https://groups.google.
 We hope to meet with all interested parties in this forum.
 Please feel free to join and let us discuss issues, share ideas related to EdgeCloudSim all togerther.
 
-## Needed Features
+## New Classes
 
-* Mist computing features (executing tasks on mobile device)
-* Incorporating cellular access network model into EdgeCloudSim (3G/4G/5G)
-* Task migration among the Edge or Cloud VMs
-* Energy consumption model for the mobile and edge devices as well as the cloud datacenters
-* Adding probabilistic network failure model by considering the congestion or other parameters such as the distance between mobile device and the WiFi access point.
-* Visual tool for displaying the network topology
+### TrainingEdge.java
 
-# EdgeCloudSim: An Environment for Performance Evaluation of Edge Computing Systems
+This is the class where the simulation starts. For the training mode, the *isTrainingForDDQN* flag should be *true*. On the other hand, to test the performance of the trained model, that flag should be set as *false*. The number of episodes to train the model can be changed through the *numberOfEpisodes* variable. The default value is 100.
 
-EdgeCloudSim provides a modular architecture to provide support for a variety of crucial functionalities such as network modeling specific to WLAN and WAN, device mobility model, realistic and tunable load generator. As depicted in Figure 2, the current EdgeCloudSim version has five main modules available: Core Simulation, Networking, Load Generator, Mobility and Edge Orchestrator. To ease fast prototyping efforts, each module contains a default implementation that can be easily extended.
 
-<p align="center">
-  <img src="/doc/images/edgecloudsim_diagram.png" width="55%">
-  <p align="center">
-    Figure 1: Relationship between EdgeCloudSim modules.
-  </p>
-</p>
+### DDQNAgent.java
+This is the class where the DDQN agent is defined, and the corresponding neural network is created. The number of actions related to the output layer of the neural network is set to the summation of the number of edge servers and the cloud server. The model can be saved after the completion of each training episode using the *saveModel* method.
 
-## Mobility Module
-The mobility module manages the location of edge devices and clients. Since CloudSim focuses on the conventional cloud computing principles, the mobility is not considered in the framework. In our design, each mobile device has x and y coordinates which are updated according to the dynamically managed hash table. By default, we provide a nomadic mobility model, but different mobility models can be implemented by extending abstract MobilityModel class.
 
-<p align="center">
-  <img src="/doc/images/mobility_module.png" width="55%">
-</p>
+### DeepMobileDeviceManager.java
 
-## Load Generator Module
-The load generator module is responsible for generating tasks for the given configuration. By default, the tasks are generated according to a Poisson distribution via active/idle task generation pattern. If other task generation patterns are required, abstract LoadGeneratorModel class should be extended.
+This class is responsible for managing the corresponding events in the simulator as in the original EdgeCloudSim. However, it is crucial for the DRL training as the reward mechanism is run considering the related events. Moreover, the creation of the state-action pairs, memory items, and updating the neural network are managed via this class.
 
-<p align="center">
-  <img src="/doc/images/task_generator_module.png" width="50%">
-</p>
+### MemoryItem.java
 
-## Networking Module
-The networking module particularly handles the transmission delay in the WLAN and WAN by considering both upload and download data. The default implementation of the networking module is based on a single server queue model. Users of EdgeCloudSim can incorporate their own network behavior models by extending abstract NetworkModel class.
+We hold the five-tuple information, which is essential for DRL training, using this class.
 
-<p align="center">
-  <img src="/doc/images/network_module.png" width="55%">
-</p>
+### DeepEdgeState.java
 
-## Edge Orchestrator Module
-The edge orchestrator module is the decision maker of the system. It uses the information collected from the other modules to decide how and where to handle incoming client requests. In the first version, we simply use a probabilistic approach to decide where to handle incoming tasks, but more realistic edge orchestrator can be added by extending abstract EdgeOrchestrator class.
+The snapshot of the edge computing environment, which is a state, is stored using this class. Since DRL is based on Markov Decision Process, presenting how the corresponding state changes regarding the taken action is crucial. This state information is also an essential element for the *MemoryItem* instances.
 
-<p align="center">
-  <img src="/doc/images/edge_orchestrator_module.png" width="65%">
-</p>
+### DeepEdgeOrchestrator.java
 
-## Core Simulation Module
-The core simulation module is responsible for loading and running the Edge Computing scenarios from the configuration files. In addition, it offers a logging mechanism to save the simulation results into the files. The results are saved in comma-separated value (CSV) data format by default, but it can be changed to any format.
+The orchestrator class for offloaded tasks. It is fundamentally the same as the original EdgeCloudSim module. The difference is that it uses the trained model to decide where to offload if the policy equals “DDQN”.
 
-## Extensibility
-EdgeCloudSim uses a factory pattern making easier to integrate new models mentioned above. As shown in Figure 2, EdgeCloudsim requires a scenario factory class which knows the creation logic of the abstract modules. If you want to use different mobility, load generator, networking and edge orchestrator module, you can use your own scenario factory which provides the concrete implementation of your custom modules.
 
-<p align="center">
-  <img src="/doc/images/class_diagram.png" width="100%">
-  <p align="center">
-    Figure 2: Class Diagram of Important Modules
-  </p>
-</p>
+## Training The Agent
+
+To train a new DRL agent, the *isTrainingForDDQN* flag in **TrainingEdge.java**, and the *dqnTraining* flag in **DeepMobileDeviceManager.java** should be equal to *true*. Note that we set the *EPISODE_SIZE* to 75000 (number of tasks) as originally we trained the DeepEdge agent for 2400 active users in the network. Moreover, the default value for the number of episodes is 100. These variables can be changed based on your project.
+
+
+## Testing The Agent
+
+To test the trained agent, the specified saved model is used by the module. The path for that model is given to the orchestrator in **DeepEdgeOrchestrator.java** using the *absolutePath*. After that, the orchestrator takes offloading decisions based on your model. Moreover, the policy should be set to “DDQN” to test the agent. It can be set inside the *orchestrator_policies* in the **default_config.properties** file along with other methods such as “NETWORK_BASED”, and “FUZZY_BASED”.
+
+
+
 
 ## Ease of Use
+Since this is only an application of a DRL, the compilation and running mechanism is the same as EdgeCloudSim.
+
 At the beginning of our study, we observed that too many parameters are used in the simulations and managing these parameters programmatically is difficult.
 As a solution, we propose to use configuration files to manage the parameters.
 EdgeCloudSim reads parameters dynamically from the following files:
@@ -77,11 +58,11 @@ EdgeCloudSim reads parameters dynamically from the following files:
 - **applications.xml:** Application properties are stored in xml file
 - **edge_devices.xml:** Edge devices (datacenters, hosts, VMs etc.) are defined in xml file
 
-<p align="center">
-  <img src="/doc/images/ease_of_use.png" width="60%">
-</p>
+
 
 ## Compilation and Running
+Since this is only an application of a DRL, the compilation and running mechanism is the same as EdgeCloudSim.
+
 To compile sample application, *compile.sh* script which is located in *scripts/sample_application* folder can be used. You can rewrite similar script for your own application by modifying the arguments of javac command in way to declare the java file which includes your main method. Please note that this script can run on Linux based systems, including Mac OS. You can also use your favorite IDE (eclipse, netbeans etc.) to compile your project.
 
 In order to run multiple sample_application scenarios in parallel, you can use *run_scenarios.sh* script which is located in *scripts/sample_application* folder. To run your own application, modify the java command in *runner.sh* script in a way to declare the java class which includes your main method. The details of using this script is explained in [this](/wiki/How-to-run-EdgeCloudSim-application-in-parallel) wiki page.
@@ -93,22 +74,18 @@ tail -f output/date/ite_1.log
 ```
 
 ## Analyzing the Results
+
+Since this is only an application of a DRL, the compilation and running mechanism is the same as EdgeCloudSim.
+
 At the end of each iteration, simulation results will be compressed in the *output/date/ite_n.tgz* files. When you extract these tgz files, you will see lots of log file in csv format. You can find matlab files which can plot graphics by using these files under *scripts/sample_application/matlab* folder. You can also write other scripts (e.g. python scripts) with the same manner of matlab plotter files.
 
-## Example Output of EdgeCloudSim
-You can plot lots of graphics by using the result of EdgeCloudSim. Some examples are given below:
+## Example Output for DeepEdge Module
 
-![Alt text](/doc/images/result1.png?raw=true) ![Alt text](/doc/images/result2.png?raw=true)
+![Alt text](/doc/images/DeepEdge-SampleResults/Episodes.png?raw=true) 
 
-![Alt text](/doc/images/result4.png?raw=true) ![Alt text](/doc/images/result5.png?raw=true)
+![Alt text](/doc/images/DeepEdge-SampleResults/GeneralResults.png?raw=true)
 
-![Alt text](/doc/images/result6.png?raw=true) ![Alt text](/doc/images/result3.png?raw=true)
-
-![Alt text](/doc/images/result7.png?raw=true) ![Alt text](/doc/images/result8.png?raw=true)
 
 ## Publications
-**[1]** C. Sonmez, A. Ozgovde and C. Ersoy, "[EdgeCloudSim: An environment for performance evaluation of Edge Computing systems](http://ieeexplore.ieee.org/document/7946405/)," *2017 Second International Conference on Fog and Mobile Edge Computing (FMEC)*, Valencia, 2017, pp. 39-44.
+**[1]** B. Yamansavascilar, A. C. Baktir, Cagatay Sonmez, A. Ozgovde, and C. Ersoy, "[DeepEdge: A Deep Reinforcement Learning based Task Orchestrator for Edge Computing](https://ieeexplore.ieee.org/document/9930655)," *IEEE Transactions on Network Science and Engineering*, vol. 10, pp. 538-552, 2023.
 
-**[2]** C. Sonmez, A. Ozgovde and C. Ersoy, "[Performance evaluation of single-tier and two-tier cloudlet assisted applications](http://ieeexplore.ieee.org/document/7962674/)," *2017 IEEE International Conference on Communications Workshops (ICC Workshops)*, Paris, 2017, pp. 302-307.
-
-**[3]** Sonmez C, Ozgovde A, Ersoy C. "[EdgeCloudSim: An environment for performance evaluation of Edge Computing systems](https://onlinelibrary.wiley.com/doi/abs/10.1002/ett.3493)," *Transactions on Emerging Telecommunications Technologies*, 2018;e3493.
